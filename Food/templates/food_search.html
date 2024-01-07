@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Search</title>
+</head>
+<body>
+    <h1>Food Search</h1>
+    <form method="GET">
+        <input type="text" name="q" value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if foods %}
+        <ul>
+            {% for food in foods %}
+                <li>{{ food.name }}</li>
+                <!-- Display other food details as needed -->
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>

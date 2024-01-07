@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load static %}
+
+ {% block mainbody %}  <h2 style="margin:auto;margin-left:10px;margin-top:20px;text-align:center;"> 
+ 
+ 
+ 
+ Welcome, {{request.user.username}}</h2>
+ 
+ 
+ 
+  <h1>Food Items</h1>
+    <div class="food-cards">
+        {% for food in foods %}
+            <div class="food-card">
+
+                <img src="{{ food.image.url }}" alt="{{ food.name }}">
+                <div class="food-details">
+                    <h2 class="food-title">{{ food.name  }}</h2>
+                    <p class="food-description">{{ food.description }}</p>
+                    <h2 class="food-price">&#x20B9;{{ food.price  }}</h2>
+                    <a href="{% url 'cart_add' food.id  %}"><button class="buy-button">Add to cart</button></a> 
+                </div>
+            </div>
+        {% endfor %}
+ 
+
+ {% endblock %} 

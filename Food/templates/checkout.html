@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <!-- Add any necessary styles or scripts -->
+</head>
+<body>
+    <h1>Checkout</h1>
+    <p>Your order (ID: {{ order.orderid }}) has been successfully placed!</p>
+    
+    <h2>Order Details:</h2>
+    <p>Total Price: ${{ order.total_price }}</p>
+    
+    <h3>Items in Order:</h3>
+    <ul>
+        {% for order_item in order.orderitem_set.all %}
+            <li>{{ order_item.food_name}} - Quantity: {{ order_item.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <!-- Display any other relevant order details -->
+</body>
+</html>

@@ -1,0 +1,97 @@
+.postcontainer {
+    width: 90%;
+    margin-left: 2rem;
+    /* border: 5px red solid; */
+}
+
+.postcontainer h2{
+    text-align: center;
+    margin-top: 2rem;
+}
+.blog {
+  height: 10rem;
+  /* border: tomato 5px solid; */
+  
+}
+
+.blogtitle{
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: bolder;
+    font-size: 3vh;
+   
+}
+.blogtitle a{
+    text-decoration: none;
+    color: red;
+}
+
+.blogtitle li{
+    width: 85%;
+}
+.postcontainer p{
+    margin-top: 2rem;
+    width: 85%;
+}
+
+.read{
+    position: relative;
+    background-color: coral;
+    height: 100%;
+    width: 4rem;
+    float: right;
+    bottom: 4.65rem;
+}
+
+.readfull a{
+   color: tomato;
+  
+}
+
+.postcontainer #SubmitForm {
+    background-color: #892424; /* Green */
+    border: tomato 3px solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 40%;
+    font-size: 16px;
+}
+
+
+
+.food-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    display: inline-block;
+}
+.food-card img {
+    width: 100%;
+    height: 10em;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.food-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.food-description {
+    margin-bottom: 15px;
+}
+.buy-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}

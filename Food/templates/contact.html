@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Details</title>
+</head>
+<body>
+    <h1>Delivery Details</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'checkout' %}"><button type="submit">Check out</button></a>
+    </form>
+</body>
+</html>
