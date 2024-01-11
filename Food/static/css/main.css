@@ -328,7 +328,6 @@ header {
 /* What Is ============= */
 #whatis .container {
   position: relative;
- 
 }
 
 .whatis__desc {
@@ -355,7 +354,7 @@ header {
     padding: 0 240px 0 0;
     width: 45%;
   }
-  #whatis img{
+  #whatis img {
     margin-left: 5em;
   }
 }
@@ -440,7 +439,7 @@ header {
     left: -9%;
     width: 100%;
     height: 100%;
-    
+
     background-repeat: no-repeat;
   }
 }
@@ -657,8 +656,6 @@ header {
     right: 2%;
     transform: translate(-2%, -20%);
   }
-
-  
 }
 
 /* Footer ============= */
@@ -740,10 +737,7 @@ header {
   }
 }
 
-
-
-
-.close-modal {
+.close-modal2 {
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -752,33 +746,33 @@ header {
   padding: 0;
 }
 
-.modal {
+.modal2 {
   width: 20rem;
   position: fixed;
   top: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: top 0.3s ease-in-out;
-  
+
   border-radius: 10px;
   z-index: 2;
   background-color: rgb(242, 109, 109);
 }
 
-.modal.active {
+.modal2.active {
   top: 45%;
 }
 
-.modal .header {
+.modal2 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   padding: 0.5rem;
   background-color: rgba(255, 250, 250, 0.05);
 }
 
-.modal .body {
+.modal2 .body {
   padding: 0.75rem;
   font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
@@ -793,15 +787,14 @@ header {
   background-color: rgba(30, 17, 17, 0.3);
 }
 
-.modal .title {
+.modal2 .title {
   margin: auto;
   font-size: 1.5rem;
   font-family: "Domine", serif;
   color: #ffffff;
-  
 }
 
-.modal input{
+.modal2 input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -812,5 +805,9 @@ header {
   outline: none;
   border-radius: 20em;
   margin-bottom: 3rem;
+}
 
+.modal2-btns {
+  display: flex;
+  justify-content: space-around;
 }

@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Sign Up</title>
-</head>
-<body>
-    <h2>Sign Up</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Sign Up</button>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../static/cssSample/bootstrap.min.css" />
+  </head>
+  <body
+    style="
+      background: url('../static/img/images/signUpBackground3 ');
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    "
+  >
+    <form class="form-horizontal" method="post">
+      {% csrf_token %}
+      <div class="text-center">
+        <fieldset
+          class="form-group border border-2 border-dark"
+          style="
+            width: 40%;
+            margin: 1% auto;
+            border-radius: 3%;
+            background-color: rgba(0, 0, 0, 0.5);
+          "
+        >
+          <h2 style="text-align: center; margin-bottom: 2%">SIGN UP</h2>
+
+          <legend>{{ title }}</legend>
+          {% for field in form %} {% if field.errors %}
+          <div class="control-group error">
+            <label class="control-label">{{ field.label }}</label>
+            <div class="controls">
+              {{ field }}
+              <span class="help-inline">
+                {% for error in field.errors %}{{ error }}{% endfor %}
+              </span>
+            </div>
+          </div>
+          {% else %}
+          <div class="control-group">
+            <label class="control-label">{{ field.label }}</label>
+            <div class="controls">
+              {{ field }} {% if field.help_text %}
+              <p class="help-inline"><small>{{ field.help_text }}</small></p>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %} {% endfor %}
+
+          <div class="form-actions text-center">
+            <button
+              type="submit"
+              style="
+                margin: 1% auto;
+                background-color: white;
+                color: black;
+                font-weight: bold;
+              "
+              class="btn btn-primary"
+            >
+              Submit
+            </button>
+          </div>
+        </fieldset>
+      </div>
     </form>
-</body>
+  </body>
 </html>

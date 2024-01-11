@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Order History</title>
-</head>
-<body>
-    <h1>Order History</h1>
-    
-   
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../static/cssSample/bootstrap.min.css" />
+  </head>
+  <body style="background-color: #f7bbb2">
+    <h1 class="m-5">Order History</h1>
 
     {% for order, items in context %}
-    <h2>Order #{{ order.orderid }}</h2>
-    <!-- Display other order details -->
-
-    <h3>Order Items:</h3>
-    <ul>
+    <div class="border border-3 border-dark m-5 p-2">
+      <h2 style="text-decoration: underline">Order ID : {{ order.orderid }}</h2>
+      <!-- Display other order details -->
+      <ul>
         {% for item in items %}
-            <li>{{ item.name }} - Quantity: {{ item.quantity }} - Total: {{ item.total }}</li>
-            <!-- Display other item details -->
+        <li>
+          {{ item.name }} - Quantity: {{ item.quantity }}-Total: {{ item.total}}
+        </li>
+        <!-- Display other item details -->
         {% endfor %}
-    </ul>
-    <hr>
-{% endfor %}
-
-</body>
+      </ul>
+    </div>
+    {% endfor %}
+  </body>
 </html>

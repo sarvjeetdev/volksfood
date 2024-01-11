@@ -1,15 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Delivery Details</title>
-</head>
-<body>
-    <h1>Delivery Details</h1>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../static/cssSample/bootstrap.min.css" />
+  </head>
+  <body
+    style="
+      background: url('../static/img/images/deliverItemImage.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    "
+  >
     <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <a href="{% url 'checkout' %}"><button type="submit">Check out</button></a>
+      {% csrf_token %}
+      <div
+        class="text-center border border-dark border-2 p-3"
+        style="float: right; margin: 8%; background: #8d3f37; border-radius: 3%"
+      >
+        <h1>Delivery Details</h1>
+        <form class="form-horizontal" method="post">
+          {% csrf_token %}
+          <fieldset>
+            <legend>{{ title }}</legend>
+            {% for field in form %} {% if field.errors %}
+            <div class="control-group error">
+              <label class="control-label">{{ field.label }}</label>
+              <div class="controls">
+                {{ field }}
+                <span class="help-inline">
+                  {% for error in field.errors %}{{ error }}{% endfor %}
+                </span>
+              </div>
+            </div>
+            {% else %}
+            <div class="control-group">
+              <label class="control-label">{{ field.label }}</label>
+              <div class="controls">
+                {{ field }} {% if field.help_text %}
+                <p class="help-inline"><small>{{ field.help_text }}</small></p>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %} {% endfor %}
+            <div class="form-actions m-3">
+              <a href="{% url 'checkout' %}"
+                ><button
+                  class="btn"
+                  type="submit"
+                  style="
+                    border-radius: 10px;
+                    color: #8d3f37;
+                    background-color: white;
+                  "
+                >
+                  Check out
+                </button></a
+              >
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </form>
-</body>
+  </body>
 </html>

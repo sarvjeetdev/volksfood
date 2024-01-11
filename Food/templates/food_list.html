@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Food List</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Food List</h1>
     <ul>
-        {% for food in foods %}
-            <li>
-                <h2>{{ food.title }}</h2>
-                <p>Description: {{ food.description }}</p>
-                <p>Cost: ${{ food.cost }}</p>
-                <!-- Display other fields as needed -->
-            </li>
-        {% endfor %}
+      {% for food in foods %}
+      <li>
+        <h2>{{ food.title }}</h2>
+        <p>Description: {{ food.description }}</p>
+        <p>Cost: ${{ food.cost }}</p>
+        <!-- Display other fields as needed -->
+      </li>
+      {% endfor %}
     </ul>
-</body>
+  </body>
 </html>

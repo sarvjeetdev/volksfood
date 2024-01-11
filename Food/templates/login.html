@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <!-- Main Style -->
-    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <title>ABES4U</title>
   </head>
   <body>
@@ -24,7 +24,9 @@
         <nav class="navbar">
           <!-- logo -->
           <div class="navbar__logo">
-            <a href="#banner"><img src="{% static 'img/logo.png' %}" alt="logo" /></a>
+            <a href="#banner"
+              ><img src="{% static 'img/logo.png' %}" alt="logo"
+            /></a>
             <p>ABES 4U</p>
           </div>
           <!-- links -->
@@ -33,7 +35,7 @@
             <li class="navbar__link"><a href="#features">Features</a></li>
             <li class="navbar__link"><a href="#solution">Solution</a></li>
             <li class="navbar__link"><a href="#todo">Developers</a></li>
-            <button  data-target="#modal1" class="navbar__btn">Login</button>
+            <button data-target="#modal1" class="navbar__btn">Login</button>
           </ul>
           <!-- icon -->
           <div class="navbar__ham">
@@ -46,18 +48,16 @@
     <section id="banner">
       <div class="container">
         <div class="banner__img">
-          <img
-            src="{% static 'img/main.png' %}"
-            alt="teaching"
-          />
+          <img src="{% static 'img/main.png' %}" alt="teaching" />
         </div>
         <div class="banner__desc">
           <h4 class="banner__tag">ABES 4U</h4>
-          <h1 class="banner__title">
-            Welcome to ABES 4U
-          </h1>
+          <h1 class="banner__title">Welcome to ABES 4U</h1>
           <p class="banner__detail">
-            <b>"A In-Hand Solution for Student."</b> A personalised carrer domain recommendation for graduates to enhance their bachleor's journey for better results and getting Resources at the right point of time.
+            <b>"A In-Hand Solution for Student."</b> A personalised carrer
+            domain recommendation for graduates to enhance their bachleor's
+            journey for better results and getting Resources at the right point
+            of time.
           </p>
           <div class="banner__btn">
             <button data-target="#modal1">Join us here</button>
@@ -69,16 +69,21 @@
     <section id="whatis">
       <div class="container">
         <div class="whatis__img">
-          <img src= "{% static 'img/what.png' %}" alt="virus illustration" />
+          <img src="{% static 'img/what.png' %}" alt="virus illustration" />
         </div>
         <div class="whatis__desc">
           <h4 class="section__tag">what is ABES 4U</h4>
           <h3 class="section__title">A IN-Hand GUIDE</h3>
           <p class="section__detail">
-            As a student, getting ready for placements can be a daunting task. However, with the right preparation and guidance,
-             you can increase your chances of landing your dream job. Enchancing  relevant skills and experiences you have gained through internships, extracurricular
-              activities, or volunteer work. Remember, <i>preparation and perseverance are key to success in the placement process.</i>
-          
+            As a student, getting ready for placements can be a daunting task.
+            However, with the right preparation and guidance, you can increase
+            your chances of landing your dream job. Enchancing relevant skills
+            and experiences you have gained through internships, extracurricular
+            activities, or volunteer work. Remember,
+            <i
+              >preparation and perseverance are key to success in the placement
+              process.</i
+            >
           </p>
           <div class="whatis__btn">
             <a href="#solution"><button>learn more</button></a>
@@ -86,7 +91,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- solution -->
     <section id="solution" class="pt">
       <div class="container">
@@ -95,8 +100,11 @@
             <h4 class="section__tag">ABES 4U</h4>
             <h3 class="section__title">Our Solution</h3>
             <p class="section__detail">
-              Getting correct recommendation at correct time is what ABES4U aims for. ABES 4U target towards providing students a common platform to prepare themselves for industry. It includes features like Interview Archive, Placement Stats , Resources for preparation , Alumni Management Portal and FRIEND'S AI.
-            
+              Getting correct recommendation at correct time is what ABES4U aims
+              for. ABES 4U target towards providing students a common platform
+              to prepare themselves for industry. It includes features like
+              Interview Archive, Placement Stats , Resources for preparation ,
+              Alumni Management Portal and FRIEND'S AI.
             </p>
           </div>
           <div class="solution__img">
@@ -113,28 +121,36 @@
             <h4 class="section__tag">ABES 4U</h4>
             <h3 class="section__title">Our Features</h3>
             <p class="section__detail">
-             Co-curricular and Technical comes hand in hand.ABES 4U aims towards providing students a common platform to prepare themselves for industry. It includes features like Interview Archive, Placement Stats
-              , Resources for preparation , Alumni Management Portal and FRIEND'S AI.
+              Co-curricular and Technical comes hand in hand.ABES 4U aims
+              towards providing students a common platform to prepare themselves
+              for industry. It includes features like Interview Archive,
+              Placement Stats , Resources for preparation , Alumni Management
+              Portal and FRIEND'S AI.
             </p>
           </div>
           <div class="features__cards">
             <!-- card 1 -->
             <div class="features__card">
-              <img src="{% static 'img/cont-1.png' %}" alt="girl coughing illustration" />
+              <img
+                src="{% static 'img/cont-1.png' %}"
+                alt="girl coughing illustration"
+              />
               <h2>Career Path Recommendation</h2>
               <p>
-                 It will provide them the necessary guidance, at the right time,
-                 from the right person.
+                It will provide them the necessary guidance, at the right time,
+                from the right person.
               </p>
             </div>
             <!-- card 2 -->
             <div class="features__card">
-              <img src="{% static 'img/cont-2.png' %}" alt="holding hands illustration" />
+              <img
+                src="{% static 'img/cont-2.png' %}"
+                alt="holding hands illustration"
+              />
               <h2>Interview Archives</h2>
               <p>
-                Interview archives are an essential tool for placement as they provide a 
-                valuable resource for job seekers.
-              
+                Interview archives are an essential tool for placement as they
+                provide a valuable resource for job seekers.
               </p>
             </div>
             <!-- card 3 -->
@@ -142,8 +158,8 @@
               <img src="{% static 'img/cont-3.png' %}" alt="cup illustration" />
               <h2>Useful Resources</h2>
               <p>
-                 A pool of resources like Alumni portal , Resume Building, Friend's AI and many more 
-                 are the useful resources we offer.
+                A pool of resources like Alumni portal , Resume Building,
+                Friend's AI and many more are the useful resources we offer.
               </p>
             </div>
           </div>
@@ -153,15 +169,15 @@
     <!-- Todo -->
     <section id="todo" class="pt">
       <div class="container">
-        
         <div class="wrapper">
           <div class="section__heading">
             <h4 class="section__tag">ABES 4U</h4>
             <h3 class="section__title">Meet the Developers</h3>
             <p class="section__detail">
-                We are a team of three members having good experience in Python Development , Analysis, Machine Learning ,
-                Neural Networking and Full Stack Development.
-                 </p>
+              We are a team of three members having good experience in Python
+              Development , Analysis, Machine Learning , Neural Networking and
+              Full Stack Development.
+            </p>
           </div>
           <div class="todo__steps">
             <!-- step 1 -->
@@ -172,17 +188,15 @@
                   <div class="ml">
                     <h5>Sarvjeet Singh</h5>
                     <p>
-                     A Final Year Student. I have keen interst in software development, full stack 
-                     and all time Machine Learning Enthusiast.
+                      A Final Year Student. I have keen interst in software
+                      development, full stack and all time Machine Learning
+                      Enthusiast.
                     </p>
                   </div>
                 </span>
               </div>
               <div class="todo__step-img">
-                <img
-                  src="{% static 'img/gg.png' %}"
-                  alt="Sarvjeet Singh"
-                />
+                <img src="{% static 'img/gg.png' %}" alt="Sarvjeet Singh" />
               </div>
             </div>
             <!-- step 2 -->
@@ -193,8 +207,8 @@
                   <div class="ml">
                     <h5>Utkarsh Jain</h5>
                     <p>
-                      A Final Year Student. I have keen interst in Data Analysis , Machine Learning and Software Development
-                      techniques.
+                      A Final Year Student. I have keen interst in Data Analysis
+                      , Machine Learning and Software Development techniques.
                     </p>
                   </div>
                 </span>
@@ -214,7 +228,8 @@
                   <div class="ml">
                     <h5>Vikas Pargai</h5>
                     <p>
-                      A Final Year Student. I am python developer and have interest in rapping .
+                      A Final Year Student. I am python developer and have
+                      interest in rapping .
                     </p>
                   </div></span
                 >
@@ -234,16 +249,17 @@
                   <div class="ml">
                     <h5>Sapna Jain</h5>
                     <p>
-                     She is Senior Scale Assistant Professor of Computer Science. She is having 
-                     previous experience in IT industry as Software Developer and now empowering
-                     students in field of ML/AI.
+                      She is Senior Scale Assistant Professor of Computer
+                      Science. She is having previous experience in IT industry
+                      as Software Developer and now empowering students in field
+                      of ML/AI.
                     </p>
                   </div></span
                 >
               </div>
               <div class="todo__step-img">
                 <img
-                  src="{% static 'img/todo-img-4.png' %}" 
+                  src="{% static 'img/todo-img-4.png' %}"
                   alt="female character illustration"
                 />
               </div>
@@ -254,51 +270,23 @@
     </section>
     <!-- Contact -->
 
-
-
-<div class="modal" id="modal1">
+    <div class="modal" id="modal1">
       <div class="header">
         <div class="title">Login Here</div>
         <button class="close-modal">&times;</button>
       </div>
       <div class="body">
         <form method="Post">
-           {% csrf_token %}
-            <input type="text" name="username" placeholder="username" />
-            <input type="password" name="password" placeholder="password" />
-            <button type="submit">Login</button>
-            <button type="reset">Forget password</button>
-          </form>
+          {% csrf_token %}
+          <input type="text" name="username" placeholder="username" />
+          <input type="password" name="password" placeholder="password" />
+          <button type="submit">Login</button>
+          <button type="reset">Forget password</button>
+        </form>
       </div>
     </div>
     <div id="overlay2"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
     <!-- Footer  <section id="contact" class="pt">
       <div class="container">
         <div class="wrapper">
@@ -329,9 +317,7 @@
               <li class="footer__link"><a href="#todo">Developers</a></li>
             </ul>
             <!-- socials -->
-            <div class="footer__socials">
-              
-            </div>
+            <div class="footer__socials"></div>
           </div>
           <div class="footer__bottom">
             <p>2023 B.Tech Final Year Project</p>

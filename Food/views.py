@@ -26,7 +26,7 @@ def login_user(request):
             return redirect("/")
 
     else:
-        return render(request, 'login.html',{})
+        return render(request, 'landingPage.html',{})
 
 def home(request):
     query = request.GET.get('q')
@@ -192,8 +192,6 @@ def contact(request):
         form = ContactForm()
     
     return render(request, 'contact.html', {'form': form})
-
-
 
 
 from .models import Food
