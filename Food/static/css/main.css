@@ -755,7 +755,7 @@ header {
   transition: top 0.3s ease-in-out;
 
   border-radius: 10px;
-  z-index: 2;
+  z-index: 99999;
   background-color: rgb(242, 109, 109);
 }
 
@@ -810,4 +810,10 @@ header {
 .modal2-btns {
   display: flex;
   justify-content: space-around;
+}
+
+#hide  {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
 }
