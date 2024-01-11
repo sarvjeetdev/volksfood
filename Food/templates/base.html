@@ -90,7 +90,11 @@
 			<i class='bx bx-menu' ></i>
 			<form method="GET">
 				<div class="form-input">
+				{% if query %}
 					<input type="search" placeholder="Search..." name="q" value="{{ query }}">
+				{% else %}
+					<input type="search" placeholder="Search..." name="q" >
+				{% endif %} 
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
