@@ -98,7 +98,7 @@
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
-			
+			<a href="{% url 'track' %}" class="profile"><button class="btn btn-primary">Track Order</button></a>
 			<p style="align-self: end;">Hi, {{request.user.username}}</p>
 			<a href="#" class="profile">
 				<img src="{% static 'img/profile.jpg' %}">

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +9,7 @@
   </head>
   <body style="background-color: #f7bbb2">
     <h1 class="m-5">Order History</h1>
+    <div style="margin:auto;text-align: center;"><a href="{% url 'home' %}"> <button class="btn btn-success">Home</button></a></div>
 
     {% for order, items in context %}
     <div class="border border-3 border-dark m-5 p-2">
@@ -16,7 +18,7 @@
       <ul>
         {% for item in items %}
         <li>
-          {{ item.name }} - Quantity: {{ item.quantity }}-Total: {{ item.total}}
+          {{ item.name }} - Quantity: {{ item.quantity }}- Price: {{ item.total}} - Total: {% widthratio  item.quantity 1 item.total %}
         </li>
         <!-- Display other item details -->
         {% endfor %}

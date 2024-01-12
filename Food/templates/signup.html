@@ -13,7 +13,7 @@
       background-size: cover;
       color: white;
     "
-  >
+  >  <div style="margin:auto;"><a href="{% url 'login' %}"> <button class="btn btn-dark">Back</button></a></div>
     <form class="form-horizontal" method="post">
       {% csrf_token %}
       <div class="text-center">
@@ -63,8 +63,10 @@
             >
               Submit
             </button>
+            
           </div>
         </fieldset>
+       
       </div>
     </form>
   </body>

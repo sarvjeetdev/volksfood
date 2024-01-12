@@ -12,6 +12,8 @@ from .forms import CustomUserCreationForm
 from .models import Food
 
 
+from django.contrib.auth.decorators import login_required
+
 def login_user(request):
     if request.method=='POST':
         username = request.POST['username']
@@ -27,7 +29,7 @@ def login_user(request):
 
     else:
         return render(request, 'landingPage.html',{})
-
+@login_required
 def home(request):
     query = request.GET.get('q')
     if query:
@@ -56,8 +58,6 @@ class MyLogoutView(LogoutView):
 
 
 
-
-from django.contrib.auth.decorators import login_required
 from cart.cart import Cart
 from .models import Food,Order,OrderItem,Contact
 from django.utils import timezone
@@ -168,6 +168,7 @@ def order_history(request):
     context = []
     for order in orders:
         context.append((order, order_items.get(order.orderid, [])))
+    context = list(reversed(context))
 
     #print("\n\nCONTEXT",context)
     #print("\n\n")
@@ -196,6 +197,7 @@ def contact(request):
 
 from .models import Food
 
+@login_required(login_url="login")
 def food_search(request):
     query = request.GET.get('q')
     if query:
@@ -203,3 +205,8 @@ def food_search(request):
     else:
         foods = Food.objects.all()
     return render(request, 'food_search.html', {'foods': foods, 'query': query})
+
+
+@login_required(login_url="login")
+def track(request):
+    return render(request, 'track.html')
